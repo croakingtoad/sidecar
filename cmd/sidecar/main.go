@@ -35,6 +35,7 @@ import (
 	"github.com/marcus/sidecar/internal/plugins/filebrowser"
 	"github.com/marcus/sidecar/internal/plugins/gitstatus"
 	"github.com/marcus/sidecar/internal/plugins/notes"
+	"github.com/marcus/sidecar/internal/plugins/projects"
 	"github.com/marcus/sidecar/internal/plugins/tdmonitor"
 	"github.com/marcus/sidecar/internal/plugins/workspace"
 	"github.com/marcus/sidecar/internal/state"
@@ -198,6 +199,9 @@ func main() {
 		if err := registry.Register(notes.New()); err != nil {
 			logger.Warn("failed to register notes plugin", "err", err)
 		}
+	}
+	if err := registry.Register(projects.New()); err != nil {
+		logger.Warn("failed to register projects plugin", "err", err)
 	}
 
 	// Apply user keymap overrides
