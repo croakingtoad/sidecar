@@ -1360,6 +1360,8 @@ func isRootContext(ctx string) bool {
 		return true
 	case "notes-list":
 		return true
+	case "projects-dashboard":
+		return true
 	default:
 		return false
 	}
