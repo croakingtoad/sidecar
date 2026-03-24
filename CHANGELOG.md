@@ -2,6 +2,11 @@
 
 All notable changes to sidecar are documented here.
 
+## [v0.82.0] - 2026-03-24
+
+### Dependencies
+- bump td to v0.43.0 — 24 bug fixes: atomic lossless import, UpdateIssue missing fields, timezone-aware defer/due filtering, RemoveDependencyLogged wrong depID, DeleteBoardLogged atomicity, RateLimiter goroutine leak, CORS missing methods, snapshot stat error, DB connection leaks, form scroll over-run, modal click detection, in-progress panel header count, RFC3339Nano sync parsing, sess nil guard, escapeJSON completeness, stdin pipe size guard, trusted proxy XFF spoofing, CreateUser admin TOCTOU race, backfill false positive, autosync tx leak, singleflight snapshot dedup
+
 ## [v0.80.0] - 2026-03-21
 
 ### Dependencies
