@@ -2,6 +2,11 @@
 
 All notable changes to sidecar are documented here.
 
+## [v0.84.0] - 2026-04-18
+
+### Dependencies
+- bump td to v0.44.0 — SQLite configuration stabilization: `foreign_keys=ON` enforced on CLI `issues.db` with migration 30 orphan cleanup + schema `ON DELETE CASCADE` on child relations; centralized SQLite opener (`OpenSQLite`) with uniform pragmas; PASSIVE WAL checkpoints on `Close`; removed redundant manual cascade emulation in `internal/sync/events.go`; new `td doctor fk` orphan audit (gated by `TD_FEATURE_SYNC_CLI=1`); new `TD_MONITOR_DBPOOL_DEBUG` env var for monitor connection-leak tracing; `td import` tolerates forward-referencing deps via per-transaction FK toggle
+
 ## [v0.83.0] - 2026-03-24
 
 ### Features
